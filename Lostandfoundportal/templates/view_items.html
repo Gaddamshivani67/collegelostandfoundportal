@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Lost & Found Items</h2>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Type</th>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Posted By</th>
+        <th>Roll No</th>
+        <th>Branch</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td>{{ item.item_type }}</td>
+        <td>{{ item.item_name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.student_name }}</td>
+        <td>{{ item.rollno }}</td>
+        <td>{{ item.branch }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
